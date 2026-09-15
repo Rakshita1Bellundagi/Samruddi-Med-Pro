@@ -1,0 +1,402 @@
+[
+    {
+        "name": "Amoxyclav 625",
+        "batchNo": "B998877",
+        "stock": 40,
+        "expiry": "2024-12-01",
+        "status": "Good",
+        "type": "tablets",
+        "mrp": 215.50,
+        "salt": "Amoxicillin 500mg + Clavulanic Acid 125mg"
+    },
+    {
+        "name": "Azithral 500",
+        "batchNo": "A98765",
+        "stock": 15,
+        "expiry": "2025-06-15",
+        "status": "Low Stock",
+        "type": "capsules",
+        "mrp": 119.00,
+        "salt": "Azithromycin 500mg"
+    },
+    {
+        "name": "Ciplox Eye Drops",
+        "batchNo": "C112233",
+        "stock": 45,
+        "expiry": "2024-02-28",
+        "status": "Expiring Soon",
+        "type": "eye-dropper",
+        "mrp": 18.50,
+        "salt": "Ciprofloxacin 0.3%"
+    },
+    {
+        "name": "Dolo 650",
+        "batchNo": "B12345",
+        "stock": 150,
+        "expiry": "2025-12-31",
+        "status": "Good",
+        "type": "tablets",
+        "mrp": 32.20,
+        "salt": "Paracetamol 650mg"
+    },
+    {
+        "name": "Pan 40",
+        "batchNo": "P45678",
+        "stock": 200,
+        "expiry": "2026-05-20",
+        "status": "Good",
+        "type": "tablets",
+        "mrp": 155.00,
+        "salt": "Pantoprazole 40mg"
+    },
+    {
+        "name": "Telma 40",
+        "batchNo": "B111222",
+        "stock": 100,
+        "expiry": "2026-12-01",
+        "status": "Good",
+        "type": "tablets",
+        "mrp": 98.50,
+        "salt": "Telmisartan 40mg"
+    },
+    {
+        "name": "Allegra 120",
+        "batchNo": "F556677",
+        "stock": 50,
+        "expiry": "2025-08-10",
+        "status": "Good",
+        "type": "tablets",
+        "mrp": 215.00,
+        "salt": "Fexofenadine 120mg"
+    },
+    {
+        "name": "Benadryl Syrup",
+        "batchNo": "S123321",
+        "stock": 30,
+        "expiry": "2025-11-20",
+        "status": "Good",
+        "type": "syrup",
+        "mrp": 135.00,
+        "salt": "Diphenhydramine"
+    },
+    {
+        "name": "Augmentin 625",
+        "batchNo": "B887766",
+        "stock": 60,
+        "expiry": "2026-01-15",
+        "status": "Good",
+        "type": "tablets",
+        "mrp": 223.40,
+        "salt": "Amoxycillin + Clavulanic Acid"
+    },
+    {
+        "name": "Vertin 16",
+        "batchNo": "V443322",
+        "stock": 80,
+        "expiry": "2025-09-30",
+        "status": "Good",
+        "type": "tablets",
+        "mrp": 167.00,
+        "salt": "Betahistine 16mg"
+    },
+    {
+        "name": "Zifi 200",
+        "batchNo": "Z998811",
+        "stock": 40,
+        "expiry": "2026-03-12",
+        "status": "Good",
+        "type": "tablets",
+        "mrp": 105.50,
+        "salt": "Cefixime 200mg"
+    },
+    {
+        "name": "Liv 52",
+        "batchNo": "L001122",
+        "stock": 120,
+        "expiry": "2027-05-01",
+        "status": "Good",
+        "type": "tablets",
+        "mrp": 150.00,
+        "salt": "Herbal Mixture"
+    },
+    {
+        "name": "Combiflam",
+        "batchNo": "C334455",
+        "stock": 250,
+        "expiry": "2026-10-20",
+        "status": "Good",
+        "type": "tablets",
+        "mrp": 45.00,
+        "salt": "Ibuprofen + Paracetamol"
+    },
+    {
+        "name": "Shelcal 500",
+        "batchNo": "S776655",
+        "stock": 150,
+        "expiry": "2026-08-15",
+        "status": "Good",
+        "type": "tablets",
+        "mrp": 120.00,
+        "salt": "Calcium + Vitamin D3"
+    },
+    {
+        "name": "Digene Gel",
+        "batchNo": "D554433",
+        "stock": 40,
+        "expiry": "2025-12-05",
+        "status": "Good",
+        "type": "syrup",
+        "mrp": 160.00,
+        "salt": "Antacid Mixture"
+    },
+    {
+        "name": "Otrivin Oxy",
+        "batchNo": "O110022",
+        "stock": 25,
+        "expiry": "2025-06-30",
+        "status": "Good",
+        "type": "eye-dropper",
+        "mrp": 95.00,
+        "salt": "Oxymetazoline"
+    },
+    {
+        "name": "Vicks Vaporub",
+        "batchNo": "V223344",
+        "stock": 40,
+        "expiry": "2027-01-01",
+        "status": "Good",
+        "type": "other",
+        "mrp": 180.00,
+        "salt": "Menthol + Camphor"
+    },
+    {
+        "name": "Becosules",
+        "batchNo": "B552211",
+        "stock": 200,
+        "expiry": "2026-11-15",
+        "status": "Good",
+        "type": "capsules",
+        "mrp": 48.00,
+        "salt": "Vitamin B complex"
+    },
+    {
+        "name": "Glycomet 500",
+        "batchNo": "G332211",
+        "stock": 100,
+        "expiry": "2026-04-10",
+        "status": "Good",
+        "type": "tablets",
+        "mrp": 55.00,
+        "salt": "Metformin 500mg"
+    },
+    {
+        "name": "Atorva 10",
+        "batchNo": "A445566",
+        "stock": 90,
+        "expiry": "2026-09-05",
+        "status": "Good",
+        "type": "tablets",
+        "mrp": 110.00,
+        "salt": "Atorvastatin 10mg"
+    },
+    {
+        "name": "Amoxy-LA 150",
+        "batchNo": "BD258",
+        "stock": 50,
+        "expiry": "2026-05-15",
+        "status": "Good",
+        "type": "tablets",
+        "mrp": 145.00,
+        "salt": "Amoxycillin 150mg"
+    },
+    {
+        "name": "Calpol 500",
+        "batchNo": "CP2233",
+        "stock": 300,
+        "expiry": "2027-03-20",
+        "status": "Good",
+        "type": "tablets",
+        "mrp": 15.50,
+        "salt": "Paracetamol 500mg"
+    },
+    {
+        "name": "Voveran SR 100",
+        "batchNo": "VOV44",
+        "stock": 45,
+        "expiry": "2025-10-10",
+        "status": "Good",
+        "type": "tablets",
+        "mrp": 185.00,
+        "salt": "Diclofenac 100mg"
+    },
+    {
+        "name": "Limcee 500",
+        "batchNo": "LIM77",
+        "stock": 500,
+        "expiry": "2026-12-31",
+        "status": "Good",
+        "type": "tablets",
+        "mrp": 25.00,
+        "salt": "Vitamin C 500mg"
+    },
+    {
+        "name": "Orofer XT",
+        "batchNo": "ORO99",
+        "stock": 60,
+        "expiry": "2025-08-25",
+        "status": "Good",
+        "type": "tablets",
+        "mrp": 195.00,
+        "salt": "Ferrous Ascorbate + Folic Acid"
+    },
+    {
+        "name": "Ecosprin 75",
+        "batchNo": "ECO12",
+        "stock": 150,
+        "expiry": "2026-05-01",
+        "status": "Good",
+        "type": "tablets",
+        "mrp": 5.40,
+        "salt": "Aspirin 75mg"
+    },
+    {
+        "name": "Zyrtec 10",
+        "batchNo": "ZYR01",
+        "stock": 75,
+        "expiry": "2025-12-15",
+        "status": "Good",
+        "type": "tablets",
+        "mrp": 42.00,
+        "salt": "Cetirizine 10mg"
+    },
+    {
+        "name": "Gaviscon Liquid",
+        "batchNo": "GAV55",
+        "stock": 20,
+        "expiry": "2025-04-30",
+        "status": "Low Stock",
+        "type": "syrup",
+        "mrp": 250.00,
+        "salt": "Sodium Alginate + Bicarbonate"
+    },
+    {
+        "name": "Omee Capsule",
+        "batchNo": "OME88",
+        "stock": 120,
+        "expiry": "2026-08-10",
+        "status": "Good",
+        "type": "capsules",
+        "mrp": 60.00,
+        "salt": "Omeprazole 20mg"
+    },
+    {
+        "name": "Neurobion Forte",
+        "batchNo": "NEU11",
+        "stock": 180,
+        "expiry": "2026-11-20",
+        "status": "Good",
+        "type": "tablets",
+        "mrp": 35.00,
+        "salt": "Vitamin B complex (Fortified)"
+    },
+    {
+        "name": "Lantus SoloStar",
+        "batchNo": "LAN22",
+        "stock": 10,
+        "expiry": "2025-02-15",
+        "status": "Low Stock",
+        "type": "other",
+        "mrp": 750.00,
+        "salt": "Insulin Glargine"
+    },
+    {
+        "name": "Ermycin Ointment",
+        "batchNo": "ERM33",
+        "stock": 35,
+        "expiry": "2025-09-01",
+        "status": "Good",
+        "type": "other",
+        "mrp": 85.00,
+        "salt": "Erythromycin 2%"
+    },
+    {
+        "name": "B-Tex Ointment",
+        "batchNo": "BTEX4",
+        "stock": 50,
+        "expiry": "2026-03-31",
+        "status": "Good",
+        "type": "other",
+        "mrp": 45.00,
+        "salt": "Salicylic Acid + Sulfur"
+    },
+    {
+        "name": "Metosartan 50",
+        "batchNo": "MET50",
+        "stock": 65,
+        "expiry": "2026-07-10",
+        "status": "Good",
+        "type": "tablets",
+        "mrp": 145.00,
+        "salt": "Metoprolol + Telmisartan"
+    },
+    {
+        "name": "Janumet 50/500",
+        "batchNo": "JAN00",
+        "stock": 40,
+        "expiry": "2025-10-30",
+        "status": "Good",
+        "type": "tablets",
+        "mrp": 450.00,
+        "salt": "Sitagliptin + Metformin"
+    },
+    {
+        "name": "Combimist Inhaler",
+        "batchNo": "COM99",
+        "stock": 15,
+        "expiry": "2025-05-20",
+        "status": "Low Stock",
+        "type": "other",
+        "mrp": 320.00,
+        "salt": "Ipratropium + Salbutamol"
+    },
+    {
+        "name": "Revital H",
+        "batchNo": "REV11",
+        "stock": 110,
+        "expiry": "2027-02-01",
+        "status": "Good",
+        "type": "capsules",
+        "mrp": 350.00,
+        "salt": "Multivitamin + Ginseng"
+    },
+    {
+        "name": "Volini Gel",
+        "batchNo": "VOL22",
+        "stock": 55,
+        "expiry": "2026-06-15",
+        "status": "Good",
+        "type": "other",
+        "mrp": 125.00,
+        "salt": "Diclofenac Diethylamine"
+    },
+    {
+        "name": "Pudin Hara",
+        "batchNo": "PUD33",
+        "stock": 200,
+        "expiry": "2026-09-30",
+        "status": "Good",
+        "type": "capsules",
+        "mrp": 30.00,
+        "salt": "Peppermint + Spearmint Oil"
+    },
+    {
+        "name": "Vicks Inhaler",
+        "batchNo": "VIC44",
+        "stock": 80,
+        "expiry": "2027-04-25",
+        "status": "Good",
+        "type": "other",
+        "mrp": 65.00,
+        "salt": "Camphor + Menthol"
+    }
+]

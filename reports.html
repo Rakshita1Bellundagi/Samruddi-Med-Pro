@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports - SAMRUDDI MEDICAL SHOP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3><i class="fas fa-clinic-medical me-2"></i>SAMRUDDI MEDICAL SHOP</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="medicines.html"><i class="fas fa-pills"></i> Medicines</a></li>
+                <li><a href="inventory.html"><i class="fas fa-boxes"></i> Inventory</a></li>
+                <li><a href="billing.html"><i class="fas fa-file-invoice-dollar"></i> Billing</a></li>
+                <li><a href="customers.html"><i class="fas fa-users"></i> Customers</a></li>
+                <li><a href="reports.html" class="active"><i class="fas fa-chart-line"></i> Reports</a></li>
+                <li><a href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </nav>
+
+        <!-- Page Content -->
+        <div id="content">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light rounded shadow-sm mb-4">
+                <div class="container-fluid">
+                    <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <span class="navbar-brand ms-3">Reports & Analytics</span>
+                </div>
+            </nav>
+
+            <div class="card mb-4">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <ul class="nav nav-pills" id="reportTabs" role="tablist">
+                            <li class="nav-item">
+                                <button class="nav-link active" data-bs-toggle="pill">Daily</button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link" data-bs-toggle="pill">Monthly</button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link" data-bs-toggle="pill">Yearly</button>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-3">
+                            <div class="card bg-primary text-white h-100">
+                                <div class="card-body">
+                                    <h6>Total Sales</h6>
+                                    <h3>₹ 45,200</h3>
+                                    <small><i class="fas fa-arrow-up"></i> 12% vs last period</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card bg-success text-white h-100">
+                                <div class="card-body">
+                                    <h6>Total Profit</h6>
+                                    <h3>₹ 12,400</h3>
+                                    <small><i class="fas fa-arrow-up"></i> 8% vs last period</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card bg-warning text-dark h-100">
+                                <div class="card-body">
+                                    <h6>Stock Value</h6>
+                                    <h3>₹ 2.5 L</h3>
+                                    <small>Current Inventory</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card bg-danger text-white h-100">
+                                <div class="card-body">
+                                    <h6>Expiry Loss</h6>
+                                    <h3>₹ 1,200</h3>
+                                    <small><i class="fas fa-arrow-down"></i> 2% vs last period</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header bg-white">
+                                    <h6 class="mb-0">Sales Trend</h6>
+                                </div>
+                                <div class="card-body" style="height: 280px; overflow: hidden;">
+                                    <canvas id="salesReportChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header bg-white">
+                                    <h6 class="mb-0">Stock Composition</h6>
+                                </div>
+                                <div class="card-body" style="height: 280px; overflow: hidden;">
+                                    <canvas id="stockPieChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        document.getElementById('sidebarCollapse').addEventListener('click', function () {
+            document.getElementById('sidebar').classList.toggle('active');
+        });
+
+        // Chart data for different time periods
+        const chartData = {
+            daily: {
+                labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                data: [3200, 4100, 3800, 4500, 5200, 6100, 5800],
+                statsTotal: '₹ 32,700',
+                statsProfit: '₹ 9,200',
+                statsChange: '+15%'
+            },
+            monthly: {
+                labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
+                data: [12000, 19000, 15000, 22000],
+                statsTotal: '₹ 68,000',
+                statsProfit: '₹ 18,500',
+                statsChange: '+12%'
+            },
+            yearly: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                data: [45000, 52000, 48000, 61000, 58000, 72000, 68000, 75000, 71000, 82000, 78000, 89000],
+                statsTotal: '₹ 7.99 L',
+                statsProfit: '₹ 2.12 L',
+                statsChange: '+18%'
+            }
+        };
+
+        let currentPeriod = 'daily';
+
+        // Sales Report Chart (Bar Graph)
+        const salesCtx = document.getElementById('salesReportChart').getContext('2d');
+        const salesChart = new Chart(salesCtx, {
+            type: 'bar',
+            data: {
+                labels: chartData.daily.labels,
+                datasets: [{
+                    label: 'Sales (₹)',
+                    data: chartData.daily.data,
+                    backgroundColor: '#0d6efd',
+                    borderRadius: 5,
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function (value) {
+                                return '₹' + value.toLocaleString();
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Stock Pie Chart
+        const stockCtx = document.getElementById('stockPieChart').getContext('2d');
+        new Chart(stockCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Tablets', 'Syrups', 'Injections', 'Others'],
+                datasets: [{
+                    data: [60, 20, 10, 10],
+                    backgroundColor: ['#0d6efd', '#198754', '#ffc107', '#6c757d']
+                }]
+            },
+            options: { responsive: true, maintainAspectRatio: false }
+        });
+
+        // Tab switching functionality
+        const tabButtons = document.querySelectorAll('#reportTabs button');
+        tabButtons.forEach((btn, index) => {
+            btn.addEventListener('click', function () {
+                // Update active button
+                tabButtons.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+
+                // Determine period
+                const periods = ['daily', 'monthly', 'yearly'];
+                currentPeriod = periods[index];
+                const data = chartData[currentPeriod];
+
+                // Update chart
+                salesChart.data.labels = data.labels;
+                salesChart.data.datasets[0].data = data.data;
+                salesChart.update();
+
+                // Update stats cards
+                document.querySelector('.col-md-3:nth-child(1) h3').textContent = data.statsTotal;
+                document.querySelector('.col-md-3:nth-child(1) small').innerHTML = '<i class="fas fa-arrow-up"></i> ' + data.statsChange + ' vs last period';
+                document.querySelector('.col-md-3:nth-child(2) h3').textContent = data.statsProfit;
+            });
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory - SAMRUDDI MEDICAL SHOP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .stock-critical {
+            background-color: #ffebee;
+        }
+
+        .stock-low {
+            background-color: #fff3e0;
+        }
+
+        .stock-expiring {
+            background-color: #fffde7;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3><i class="fas fa-clinic-medical me-2"></i>SAMRUDDI MEDICAL SHOP</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+                </li>
+                <li>
+                    <a href="medicines.html"><i class="fas fa-pills"></i> Medicines</a>
+                </li>
+                <li>
+                    <a href="inventory.html" class="active"><i class="fas fa-boxes"></i> Inventory</a>
+                </li>
+                <li>
+                    <a href="billing.html"><i class="fas fa-file-invoice-dollar"></i> Billing</a>
+                </li>
+                <li>
+                    <a href="customers.html"><i class="fas fa-users"></i> Customers</a>
+                </li>
+                <li>
+                    <a href="reports.html"><i class="fas fa-chart-line"></i> Reports</a>
+                </li>
+                <li>
+                    <a href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content -->
+        <div id="content">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light rounded shadow-sm mb-4">
+                <div class="container-fluid">
+                    <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <span class="navbar-brand ms-3">Inventory & Expiry Tracking</span>
+                </div>
+            </nav>
+
+            <!-- Filters -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <div class="row align-items-end">
+                        <div class="col-md-4">
+                            <label class="form-label">Search Medicine</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-white"><i class="fas fa-search text-muted"></i></span>
+                                <input type="text" id="inventorySearch" class="form-control"
+                                    placeholder="Search inventory...">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">Filter Stock</label>
+                            <select id="filterStock" class="form-select">
+                                <option value="all" selected>All Items</option>
+                                <option value="out_of_stock" class="text-danger">Out of Stock</option>
+                                <option value="low_stock" class="text-warning">Low Stock</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">Filter Expiry</label>
+                            <select id="filterExpiry" class="form-select">
+                                <option value="all" selected>All Dates</option>
+                                <option value="exp_30">Expiring in 30 Days</option>
+                                <option value="exp_60">Expiring in 60 Days</option>
+                                <option value="expired" class="text-danger">Expired</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <button class="btn btn-outline-secondary w-100" id="exportInventoryBtn">
+                                <i class="fas fa-file-export me-1"></i> Export
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Inventory Table -->
+            <div class="card">
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover mb-0 align-middle">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Medicine Name</th>
+                                    <th>Batch No</th>
+                                    <th>Available Stock</th>
+                                    <th>Expiry Date</th>
+                                    <th>MRP (₹)</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="inventory-table-body">
+                                <!-- Data will be populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="card-footer bg-white">
+                    <small class="text-muted">Showing 5 of 128 items</small>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Add Medicine Modal -->
+    <div class="modal fade" id="addMedicineModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add New Medicine to Inventory</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="addMedicineForm">
+                        <div class="mb-3">
+                            <label class="form-label">Medicine Name</label>
+                            <input type="text" class="form-control" name="name" placeholder="e.g. Dolo 650" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Batch No</label>
+                            <input type="text" class="form-control" name="batchNo" required>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <label class="form-label">Initial Stock</label>
+                                <input type="number" class="form-control" name="stock" value="0" required>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label class="form-label">MRP (₹)</label>
+                                <input type="number" class="form-control" name="mrp" step="0.01" placeholder="0.00"
+                                    required>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label class="form-label">Expiry Date</label>
+                                <input type="date" class="form-control" name="expiry" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Category / Type</label>
+                            <select class="form-select" name="type">
+                                <option value="tablets">Tablets</option>
+                                <option value="capsules">Capsules</option>
+                                <option value="syrup">Syrup</option>
+                                <option value="eye-dropper">Eye Dropper</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" form="addMedicineForm" class="btn btn-primary">Add to Inventory</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/db.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/inventory.js"></script>
+    <script>
+        document.getElementById('sidebarCollapse').addEventListener('click', function () {
+            document.getElementById('sidebar').classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

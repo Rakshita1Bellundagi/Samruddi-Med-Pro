@@ -1,0 +1,6 @@
+@echo off
+echo Starting Medi Shop Server...
+echo Opening browser...
+start http://localhost:3000/inventory.html
+npm start
+pause

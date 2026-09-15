@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Dolo 650",
+        "salt": "Paracetamol 650mg",
+        "category": "Tablet"
+    },
+    {
+        "name": "Azithral 500",
+        "salt": "Azithromycin 500mg",
+        "category": "Tablet"
+    },
+    {
+        "name": "Pan 40",
+        "salt": "Pantoprazole 40mg",
+        "category": "Tablet"
+    },
+    {
+        "name": "Amoxyclav 625",
+        "salt": "Amoxicillin 500mg + Clavulanic Acid 125mg",
+        "category": "Tablet"
+    },
+    {
+        "name": "Ciplox Eye Drops",
+        "salt": "Ciprofloxacin 0.3%",
+        "category": "Eye Drops"
+    },
+    {
+        "name": "Combiflam",
+        "salt": "Ibuprofen + Paracetamol",
+        "category": "Tablet"
+    },
+    {
+        "name": "Zerodol P",
+        "salt": "Aceclofenac + Paracetamol",
+        "category": "Tablet"
+    },
+    {
+        "name": "Limcee",
+        "salt": "Vitamin C 500mg",
+        "category": "Tablet"
+    },
+    {
+        "name": "Zincovit",
+        "salt": "Multivitamin + Multimineral",
+        "category": "Tablet"
+    },
+    {
+        "name": "Benadryl",
+        "salt": "Diphenhydramine",
+        "category": "Syrup"
+    },
+    {
+        "name": "Ascoril LS",
+        "salt": "Ambroxol + Levosalbutamol + Guaiphenesin",
+        "category": "Syrup"
+    },
+    {
+        "name": "Augmentin 625",
+        "salt": "Amoxicillin + Clavulanic Acid",
+        "category": "Tablet"
+    },
+    {
+        "name": "Voveran",
+        "salt": "Diclofenac",
+        "category": "Tablet"
+    },
+    {
+        "name": "Taxim O 200",
+        "salt": "Cefixime 200mg",
+        "category": "Tablet"
+    }
+]
