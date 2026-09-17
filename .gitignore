@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.sqlite3
+medical_shop.db
+uploads/
+node_modules/
+.env
+__pycache__.zip
