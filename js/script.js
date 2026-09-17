@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function fetchInventory() {
     try {
-        const response = await fetch('/api/inventory');
+        const response = await fetch('https://samruddi-med-pro.onrender.com/api/inventory');
         const data = await response.json();
         renderInventory(data);
     } catch (error) {
@@ -73,7 +73,7 @@ function renderInventory(items) {
 async function restockItem(batchNo) {
     if (!confirm('Restock this item?')) return;
     try {
-        const response = await fetch('/api/inventory/update', {
+        const response = await fetch('https://samruddi-med-pro.onrender.com/api/inventory/update', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ batchNo, action: 'restock' })
@@ -90,7 +90,7 @@ async function restockItem(batchNo) {
 async function disposeItem(batchNo) {
     if (!confirm('Dispose this item?')) return;
     try {
-        const response = await fetch('/api/inventory/update', {
+        const response = await fetch('https://samruddi-med-pro.onrender.com/api/inventory/update', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ batchNo, action: 'dispose' })

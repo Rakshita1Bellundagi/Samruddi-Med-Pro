@@ -1,7 +1,7 @@
 // Database Connection Bridge to Flask Backend
 // This file connects the frontend to the real SQL database via the Flask API
 
-const API_BASE_URL = 'http://localhost:5001/api';
+const API_BASE_URL = 'https://samruddi-med-pro.onrender.com/api';
 
 const DB = {
     // Inventory / Medicine Operations

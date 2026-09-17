@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Initial Bill No set from API
     async function refreshNextBillNo() {
         try {
-            const res = await fetch('http://localhost:5001/api/bills/next-number');
+            const res = await fetch('https://samruddi-med-pro.onrender.com/api/bills/next-number');
             const data = await res.json();
             currentBillNo = data.next_no;
             const billNoBadge = document.getElementById('billNoBadge');
