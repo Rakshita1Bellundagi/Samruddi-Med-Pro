@@ -276,7 +276,7 @@
             uploadBtn.disabled = true;
 
             try {
-                const res = await fetch('/api/prescriptions', {
+                const res = await fetch('https://samruddi-med-pro.onrender.com/api/prescriptions', {
                     method: 'POST',
                     body: formData
                 });
@@ -300,7 +300,7 @@
         // Fetch and Display Recent Uploads
         async function fetchPrescriptions() {
             try {
-                const res = await fetch('/api/prescriptions');
+                const res = await fetch('https://samruddi-med-pro.onrender.com/api/prescriptions');
                 const data = await res.json();
 
                 const listContainer = document.querySelector('.list-group');
@@ -372,7 +372,7 @@
 
             try {
                 // Fetch inventory for search (Not optimized for large datasets but works for small)
-                const res = await fetch('/api/inventory');
+                const res = await fetch('https://samruddi-med-pro.onrender.com/api/inventory');
                 const data = await res.json();
 
                 const matches = data.filter(item =>

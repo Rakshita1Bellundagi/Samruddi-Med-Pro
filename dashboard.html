@@ -258,7 +258,7 @@
     <script>
         function refreshDashboard() {
             // Fetch Dashboard Stats
-            fetch('/api/analytics/stats')
+            fetch('https://samruddi-med-pro.onrender.com/api/analytics/stats')
                 .then(res => res.json())
                 .then(data => {
                     document.querySelectorAll('.stats-card h3')[0].innerText = '₹ ' + (parseFloat(data.today_sales) || 0).toFixed(2);
@@ -269,7 +269,7 @@
                 .catch(err => console.error('Error fetching dashboard stats:', err));
 
             // Top Selling Products
-            fetch('/api/analytics/top-selling')
+            fetch('https://samruddi-med-pro.onrender.com/api/analytics/top-selling')
                 .then(res => res.json())
                 .then(data => {
                     const tbody = document.querySelector('.top-selling-table tbody');
